@@ -1,0 +1,36 @@
+*{
+    margin=0px;
+    padding=0px;
+    box-sizing: border-box;
+}.container{
+    max-width: 60%;
+    background-color: blueviolet;
+    padding: 34px;
+    margin:auto;
+
+
+}.container h1,h2,p{
+    text-align: center;
+
+    h1{
+        font-size: 25px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+}
+input{
+    width:80;
+    margin: 12px;
+    padding:7px;
+    border-radius: 6px;
+    border:2px solid blue;
+
+}
+
+bg{
+    width: 100%;
+ position: absolute;
+ z-index: -1;
+}
