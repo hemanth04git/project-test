@@ -64,8 +64,8 @@ input{
     border:2px solid black;
 
 }
-bg{
-  width: 100px;; 
+background{
+  width: 100px;
   position:absolute;
   z-index: -1;
  
