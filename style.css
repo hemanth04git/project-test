@@ -1,73 +1,89 @@
 
-
-  .navbar{
-    background-color:whitesmoke;
-  }
-.navbar li {
-  float:left;
-  list-style: none;
-
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #222;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  font-size: 120%;
 }
-.navbar ul{
-overflow:auto;
-}
-.navbar{
- margin:0px,0px;
-  color: black;
+
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 2em;
   border-radius: 30px;
-}
-.navbar li a{
-  padding: 3px;
-  text-decoration: none;
-  color:solid 0px skyblue;
-  font-size: large;
-} 
-.navbar input{
-  border: 2px solid black;
-
-
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
 }
 
-
-*{
-
-margin:auto;
-padding:12px;
-box-sizing: border-box;
-background-color: rgb(0, 0, 160);
-
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container{
-    max-width: 100%;
-    
-    padding: 34px;
-    margin:auto;
-background: indianred;
-
-}.container h1,h2,p{
-    text-align: center;
-    font-style: oblique;
-    h1{
-        font-size: 10px;
-    }
-    
-    p{
-        font-size: 6px;
-    }
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
-input{
-    width:80;
-    margin: 12px;
-    padding:7px;
-    border-radius: 6px;
-    border:2px solid black;
 
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
 }
-background{
-  width: 100px;
-  position:absolute;
-  z-index: -1;
- 
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color:#222(48, 38, 38);
+  position: absolute;
+  top: 0;
+  left: 20px;
+  
 }
 

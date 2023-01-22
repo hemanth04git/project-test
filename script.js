@@ -32,7 +32,7 @@ let weather = {
         "Wind speed: " + speed + " km/h";
       document.querySelector(".weather").classList.remove("loading");
       document.body.style.backgroundImage =
-        "url(' + name + "')";
+        "url('https://source.unsplash.com/1600x900/?" + name + "')";
     },
     search: function () {
       this.fetchWeather(document.querySelector(".search-bar").value);
@@ -52,7 +52,3 @@ let weather = {
     });
   
   weather.fetchWeather("Denver");
-  <a class="weatherwidget-io" href="https://forecast7.com/en/32d96n102d83/denver-city/" data-label_1="DENVER CITY" data-label_2="WEATHER" data-theme="pure" >DENVER CITY WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
