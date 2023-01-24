@@ -77,11 +77,16 @@ body {
       border:"3px"black;
      
     }
-    h2,u{
+    u{
       text-align: left;
       text-indent: 15px;
       font-size:35px;
-      font-style:oblique;
+      font-style:Terminus;
     
+    }h2{
+      text-align: center;
+      text-indent: 15px;
+      font-size:35px;
+      font-family: 'Times New Roman', Times, serif;
     }
     
