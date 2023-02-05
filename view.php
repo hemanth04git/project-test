@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   
@@ -8,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> whether forecasting website</title>
     
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="view.css">
    
 </head>
 <body>
@@ -17,8 +16,10 @@
      <nav class="navbar">
       <ul>
         <li><a href="index.html"> Home </a></li>
-        <li><a href="signup.html"> Sign up </a></li>
-        <li><a href="adminsignin.html">  Admin login </a></li>
+        <li><a href="report.html"> Report whether </a></li>
+      
+      <li><a href="view.html"> view Report </a></li>
+    
       <li><a href="whether.html"> Whether </a></li>
       <li>
         <div class ="search">
@@ -42,18 +43,30 @@
           <p>  Enter the Details </p>
           <form action="index.php" method="post">
            
-            <input type ="text" name="name" id="name" placeholder="enter your name"><br>
-            <input type ="text" name="name" id="username" placeholder="enter your username"><br>
-            <input type ="text" name="name" id="password" placeholder="enter your password"><br>  
-            <input type ="text" name="name" id="confirm password" placeholder="confirm  your password"><br>
-             <button class="btn"> register</button>
+            <input type ="text" name="name" id="name" placeholder="enter the place"><br>
+            <input type ="text" name="name" id="username" placeholder="enter the whether "><br>
+        
+             <button class="btn"> submit</button>
             <button class="btn"> clear </button>
             </form>
           
+            <table border = "1">
+         <tr>
+            <td>location</td>
+            <td>whether</td>
+         </tr>
+         
+         <tr>
+            <td>denver</td>
+            <td>cloudy 51°C</td>
+         </tr>
+      </table>
               </div>
            
             </div>
-                 
-
+            
+             
+              
+<script src="index.js"></script>
 </body>
 </html>

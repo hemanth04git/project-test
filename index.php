@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+if (isset($_SESSION["user_id"])) {
+    
+    $sql = "SELECT * FROM user
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +20,21 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
 </head>
-
+<body>
     
     <h1>Home</h1>
     
-
+    <?php if (isset($user)): ?>
+        
+        <p>Hello <?= htmlspecialchars($user["name"]) ?></p>
+        
+        <p><a href="logout.php">Log out</a></p>
+        
+    <?php else: ?>
+        
+        <p><a href="login.php">Log in</a> or <a href="signup.php">sign up</a></p>
+        
+    <?php endif; ?>
     <div class="container">
         
           <form action="index.php" method="post">
@@ -22,7 +47,7 @@
       <ul>
         <li><a href="index.html"> Home </a></li>
         
-        <li><a href="report.html"> Report whether </a></li>
+        <li><a href="report.html">  Report whether </a></li>
       
       <li><a href="view.php"> view whether </a></li>
     
@@ -66,6 +91,12 @@
      </li> </ul> <script src="index.js"></script>
 </body>
 </html>
+    
+    
+    
+    
+    
+    
     
     
     
