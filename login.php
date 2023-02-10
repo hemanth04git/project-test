@@ -8,12 +8,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
      
     $sql = "Select * from users where username='$username' AND password='$password'";
-    $sql = "Select * from users where username='$username'";
+   
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
     if ($num == 1){
-        while($row=mysqli_fetch_assoc($result)){
-            if (password_verify($password, $row['password'])){ 
+       
                 $login = true;
                 session_start();
                 $_SESSION['loggedin'] = true;
@@ -25,46 +24,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
         }
         
-    } 
-    else{
-        $showError = "Invalid Credentials";
-    }
-}
     
-?>
-<?php
-$login = false;
-$showError = false;
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'partials/_dbconnect.php';
-    $username = $_POST["username"];
-    $password = $_POST["password"]; 
-    
-     
-     $sql = "Select * from users where username='$username' AND password='$password'";
-    $sql = "Select * from users where username='$username'";
-    $result = mysqli_query($conn, $sql);
-    $num = mysqli_num_rows($result);
-    if ($num == 1){
-        while($row=mysqli_fetch_assoc($result)){
-            if (password_verify($password, $row['password'])){ 
-                $login = true;
-                session_start();
-                $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $username;
-                header("location: index.php");
-            } 
-            else{
-                $showError = "Invalid Credentials";
-            }
-        }
-        
-    } 
-    else{
-        $showError = "Invalid Credentials";
-    }
-}
-    
+
+include 'partials/_nav.php'
+
+
 ?>
 
 <!doctype html>
@@ -72,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -80,8 +44,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Login</title>
   </head>
   <body>
-  <img src="https://source.unsplash.com/1600x900/?landscape"alt="error loading image"z-index=-1;>
-    <?php require 'partials/_nav.php' ?>
+  <img src="https://source.unsplash.com/1600x900/?landscape"alt="error loading image"style=z-index: axis -1;;>
+  
     <?php
     if($login){
     echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -109,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="form-group">
    
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="username" name="username" >
             
         </div>
         <div class="form-group">

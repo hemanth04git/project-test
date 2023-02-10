@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +16,12 @@
     <header>
      <nav class="navbar">
       <ul>
-        <li><a href="index.html"> Home </a></li>
-        <li><a href="report.html"> Report whether </a></li>
+        <li><a href="index.php"> Home </a></li>
+        <li><a href="report.html"> view location</a></li>
       
-      <li><a href="view.html"> view Report </a></li>
+      <li><a href="view.php"> report weather</a></li>
     
-      <li><a href="whether.html"> Whether </a></li>
+      <li><a href="weather.php">weather </a></li>
       <li>
         <div class ="search">
           <input type="text"name="search"id="search"placeholder="search">

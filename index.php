@@ -45,13 +45,13 @@ if (isset($_SESSION["user_id"])) {
     <header>
      <nav class="navbar">
       <ul>
-        <li><a href="index.html"> Home </a></li>
+        <li><a href="index.php"> Home </a></li>
         
-        <li><a href="report.html">  Report whether </a></li>
+        <li><a href="report.html">  view location</a></li>
       
-      <li><a href="view.php"> view whether </a></li>
+      <li><a href="view.php"> report weather </a></li>
     
-      <li><a href="whether.html"> Whether </a></li>
+      <li><a href="weather.php">weather </a></li>
       <li>
         <div class ="search">
           <input type="text"name="search"id="search"placeholder="search">
@@ -70,11 +70,11 @@ if (isset($_SESSION["user_id"])) {
 
 
     <div class="container">
-        <h1>Welcome To Whether Forecasting Website</h1>
+        <h1>Welcome To weather Forecasting Website</h1>
         <img class="bg"src="bg.jpg" alt="whether forecast">
           
         <h2>website features</h2>
-        <ul>This website enables user to view ,forecast/predict and Report whether using API
+        <ul>This website enables user to view ,forecast/predict and Report weather using API
 <li>API stands for Application Programming Interface. The application can be any software that performs a specific task and the interface is a point where two applications communicate.  </li>
 
 <li> Computers follow a protocol to communicate with each other. A protocol is nothing but a set of rules that computers follow to communicate. Any computer that doesn't follow the protocol breaks the communication thread. APIs available on the web use the HTTP protocol for a number of reasons - it's easy to use and it's popular

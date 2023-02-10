@@ -25,8 +25,8 @@ body {
     .navbar li a{
       padding: 3px;
       text-decoration: none;
-      color:solid 0px skyblue;
-      font-size: large;
+      color:solid black;
+      font-size: 30px;
     } 
     .navbar input{
       border: 2px solid black;
@@ -49,19 +49,18 @@ body {
         
         padding: 34px;
         margin:auto;
-    background: indianred;
+    
     
     }.container h1,h2,p{
         text-align: center;
         font-style: oblique;
-        h1{
-            font size:14px;
-        }
-        
-        p{
-            font-size: 6px;
-        }
+    }h1{
+            font-size:25px;
     }
+        p{
+            font-size: 20px;
+        }
+    
     input{
         width:80;
         margin: 12px;
@@ -70,13 +69,7 @@ body {
         border:2px solid black;
     
     }
-    background{
-      width: 100px;
-      position:absolute;
-      z-index: -1;
-      border:"3px"black;
-     
-    }
+    
     u{
       text-align: left;
       text-indent: 15px;
@@ -89,4 +82,9 @@ body {
       font-size:35px;
       font-family: 'Times New Roman', Times, serif;
     }
-    
+    .bg{
+width:100%;
+z-index: -1;
+position:absolute;
+
+    }

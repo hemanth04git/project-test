@@ -67,13 +67,7 @@ body {
       border:2px solid black;
   
   }
-  background{
-    width: 100px;
-    position:absolute;
-    z-index: -1;
-    border:"3px"black;
-   
-  }
+
   h2,u{
     text-align: left;
     text-indent: 15px;
