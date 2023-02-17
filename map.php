@@ -22,6 +22,9 @@
     
       <li><a href="weather.php"> weather </a></li>
       <li>
+      <li >
+        <a class="nav-link" href="/loginsystem/logout.php">Logout</a>
+      </li>
         <div class ="search">
           <input type="text"name="search"id="search"placeholder="search">
 
@@ -40,15 +43,7 @@
 
     <div class="container">
         <h1>Welcome To Whether Forecasting Website<h1>
-          <p>  Enter the Details </p>
-          <form action="index.php" method="post">
-           
-            <input type ="text" name="name" id="name" placeholder="enter the place"><br>
-            <input type ="text" name="name" id="username" placeholder="enter the whether "><br>
-        
-             <button class="btn"> submit</button>
-            <button class="btn"> clear </button>
-            </form>
+  
           
             <table border = "1.5">
          <tr>
@@ -65,8 +60,8 @@
            
             </div>
             
-             
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.64169563106!2d-104.85511145!3d39.764338949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C%20CO%2C%20USA!5e0!3m2!1sen!2sin!4v1676048138598!5m2!1sen!2sin" width="1600" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
               
-<script src="index.js"></script>
+
 </body>
 </html>

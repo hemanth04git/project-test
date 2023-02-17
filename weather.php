@@ -13,26 +13,7 @@
 </head>
 
 <body>
-<header>
-     <nav class="navbar"style=width: 50px;>
-      <ul>
-        <li><a href="index.php"> Home </a></li>
-        <li><a href="report.html"> view location</a></li>
-      
-      <li><a href="view.php"> report weather</a></li>
-    
-      <li><a href="weather.php">weather </a></li>
-      <li>
-        <div class ="search">
-          <input type="text"name="search"id="search"placeholder="search">
 
-</li>
-   
-
-      </ul>
-    </header>
-    
-  
    
   
 

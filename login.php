@@ -44,7 +44,8 @@ include 'partials/_nav.php'
     <title>Login</title>
   </head>
   <body>
-  <img src="https://source.unsplash.com/1600x900/?landscape"alt="error loading image"style=z-index: axis -1;;>
+  <img src="https://source.unsplash.com/1600x900/?landscape"alt="error loading image"
+  style=z-index: axis -1;>
   
     <?php
     if($login){

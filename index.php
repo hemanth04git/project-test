@@ -47,7 +47,7 @@ if (isset($_SESSION["user_id"])) {
       <ul>
         <li><a href="index.php"> Home </a></li>
         
-        <li><a href="report.html">  view location</a></li>
+        <li><a href="map.php">  view location</a></li>
       
       <li><a href="view.php"> report weather </a></li>
     
@@ -71,7 +71,7 @@ if (isset($_SESSION["user_id"])) {
 
     <div class="container">
         <h1>Welcome To weather Forecasting Website</h1>
-        <img class="bg"src="bg.jpg" alt="whether forecast">
+    
           
         <h2>website features</h2>
         <ul>This website enables user to view ,forecast/predict and Report weather using API

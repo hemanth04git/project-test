@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> whether forecasting website</title>
+    <title> weather forecasting website</title>
     
     <link rel="stylesheet" href="view.css">
    
@@ -17,12 +17,15 @@
      <nav class="navbar">
       <ul>
         <li><a href="index.php"> Home </a></li>
-        <li><a href="report.html"> view location</a></li>
+        <li><a href="map.php"> view location</a></li>
       
       <li><a href="view.php"> report weather</a></li>
     
       <li><a href="weather.php">weather </a></li>
       <li>
+      <li >
+        <a class="nav-link" href="/loginsystem/logout.php">Logout</a>
+      </li>
         <div class ="search">
           <input type="text"name="search"id="search"placeholder="search">
 
@@ -38,36 +41,78 @@
 
   </nav>
   <img class="bg"src="bg.jpg" alt="whether forecast">
+  <div class="container my-4">
+     <h1 class="text-center">weather reporting tool</h1>
+     <form action="/loginsystem/view.php" method="post">
+     
 
-    <div class="container">
-        <h1>Welcome To Whether Forecasting Website<h1>
-          <p>  Enter the Details </p>
-          <form action="index.php" method="post">
-           
-            <input type ="text" name="name" id="name" placeholder="enter the place"><br>
-            <input type ="text" name="name" id="username" placeholder="enter the whether "><br>
-        
-             <button class="btn"> submit</button>
-            <button class="btn"> clear </button>
-            </form>
+        <div class="form-group">
+   
+            
+            <input type="text" class="form-control" id="location" name="location" >
+            
+        </div>
+        <div class="form-group">
           
-            <table border = "1">
-         <tr>
-            <td>location</td>
-            <td>whether</td>
-         </tr>
+            <input type="text" class="form-control" id="weather" name="weather">
+        </div>
+        <div class="form-group">
          
-         <tr>
-            <td>denver</td>
-            <td>cloudy 51°C</td>
-         </tr>
-      </table>
-              </div>
+            <input type="text" class="form-control" id="description" name="description">
+        </div>
+       
+         
+        <button type="submit" class="btn btn-primary">submit</button>
+     </form>
+    </div>
+<table border="2">
+  <tr>
+    <th>sl.no</th>
+    <th>location</th>
+    <th>weather</th>
+    <th>description</th>
+</tr>
+
+<?php 
+     include 'partials/_vconnect.php';
+    
+     if($_SERVER["REQUEST_METHOD"] == "POST"){
+      include 'partials/_vconnect.php';
+      if(isset($id)||isset($location)||isset($weather)||isset($description)){
+        $id=$_POST['id'];
+      $location = $_POST['location'];
+      $weather = $_POST['weather'];
+      $description = $_POST['description'];
+     $query="SELECT * FROM tool";
+     $data=mysqli_connect($conn,$query);
+     $total=mysqli_num_rows($data);
+     $result=mysqli_fetch_assoc($data);
+     echo $total;
+if($total!=0)
+ while($result=mysqli_fetch_assoc($data));
+ {
+  echo"
+  <tr>
+  <td>".$result['id']."</td>
+  <td> ".$result['location']."</td>
+  <td>".$result['weather']."</td>
+  <td> ".$result['description'] ."</td>";
+ }
+      }
+    }
+ 
+  
+ 
+ 
+ ?>
+ 
+       </table>   
+            
            
             </div>
             
-             
+</div> 
               
-<script src="index.js"></script>
+  </div>
 </body>
 </html>
