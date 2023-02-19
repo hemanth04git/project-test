@@ -11,7 +11,7 @@ if (isset($_SESSION["user_id"])) {
     
     $user = $result->fetch_assoc();
 }
-
+include 'partials/_navb.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,10 +19,11 @@ if (isset($_SESSION["user_id"])) {
     <title>Home</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     
-    <h1>Home</h1>
+    <h2>Home</h2>
     
     <?php if (isset($user)): ?>
         
@@ -42,25 +43,7 @@ if (isset($_SESSION["user_id"])) {
 
 
     
-    <header>
-     <nav class="navbar">
-      <ul>
-        <li><a href="index.php"> Home </a></li>
-        
-        <li><a href="map.php">  view location</a></li>
-      
-      <li><a href="view.php"> report weather </a></li>
-    
-      <li><a href="weather.php">weather </a></li>
-      <li>
-        <div class ="search">
-          <input type="text"name="search"id="search"placeholder="search">
 
-        </div>
-   
-
-      </ul>
-    </header>
     <a class="weatherwidget-io" href="https://forecast7.com/en/32d96n102d83/denver-city/" data-label_1="DENVER CITY" data-label_2="WEATHER" data-theme="original" >DENVER CITY WEATHER</a>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
@@ -70,7 +53,7 @@ if (isset($_SESSION["user_id"])) {
 
 
     <div class="container">
-        <h1>Welcome To weather Forecasting Website</h1>
+    <h1 style="text-align:center;   border-color: black; border-width:2px; border-radius: 3px; border-style: solid; ">Welcome To weather Forecasting Website</h1>
     
           
         <h2>website features</h2>
@@ -88,10 +71,21 @@ if (isset($_SESSION["user_id"])) {
        <li> When a client makes a request, the server responds to that request. The response might be the data the client requested or an error.
         
         Just like a response, a request has a structure including a URL, status code, header and body. In a request, we have a method, which has four types. And in the response, we have a status code which indicates whether a request has been accepted or declined.
-     </li> </ul> <script src="index.js"></script>
+     </li>
+     
+     <li>helps in analysing data with respect to weather in order to generate reports and store data regarding the conditions of the environment</li>
+     
+     
+     
+     
+     </ul> 
+     <script src="index.js"></script>
+     <footer style="background-color:black; text-align:center">
+     @Copyright weather forecasting website 2023- All Right Reserved.   
+            </footer>
 </body>
 </html>
-    
+     
     
     
     

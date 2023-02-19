@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,13 +32,14 @@
       <h2 class="city">Weather in Denver</h2>
       <h1 class="temp">51°C</h1>
       <div class="flex">
-        <img src="https://source.unsplash.com/1600x900/?landscape" alt="" class="icon" />
+        <img src="https://source.unsplash.com/1600x900/?landscape" alt="no image found" class="icon" />
         <div class="description">Cloudy</div>
       </div>
       <div class="humidity">Humidity: 60%</div>
       <div class="wind">Wind speed: 6.2 km/h</div>
     </div>
   </div>
+
 </body>
 
 </html>

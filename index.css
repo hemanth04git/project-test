@@ -3,36 +3,14 @@ body {
    
     
     font-family: 'Open Sans', sans-serif;
-    background: #222;
+    background:#333;
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     font-size: 120%;
+    
   }
   
   
-    .navbar li {
-      float:left;
-      list-style: none;
-    
-    }
-    .navbar ul{
-    overflow:auto;
-    }
-    .navbar{
-     margin:0px,0px;
-      color:lightseagreen;
-      border-radius: 30px;
-    }
-    .navbar li a{
-      padding: 3px;
-      text-decoration: none;
-      color:solid black;
-      font-size: 30px;
-    } 
-    .navbar input{
-      border: 2px solid black;
-    
-    
-    }
+  
     
     
     *{
@@ -41,12 +19,12 @@ body {
     padding:12px;
     box-sizing: border-box;
    
-    
+   
     }
     
     .container{
         max-width: 100%;
-        
+        background-color: blueviolet;
         padding: 34px;
         margin:auto;
     
@@ -82,9 +60,9 @@ body {
       font-size:35px;
       font-family: 'Times New Roman', Times, serif;
     }
-    .bg{
-width:100%;
-z-index: -1;
-position:absolute;
-
-    }
+h1{
+  border-color: black;
+border-width:2px;
+border-radius: 3px;
+border-style: solid;
+}
