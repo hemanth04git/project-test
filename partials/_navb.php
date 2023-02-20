@@ -9,7 +9,7 @@
       <li class="nav-item active">
        
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/index.php">Home</a>
+        <a class="nav-link" href="/loginsystem/homepage.php">Home</a>
       </li>
    
       <li class="nav-item">

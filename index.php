@@ -1,96 +1,85 @@
 <?php
-
-session_start();
-
-if (isset($_SESSION["user_id"])) {
-    
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
-            
-    $result = $mysqli->query($sql);
-    
-    $user = $result->fetch_assoc();
+$showAlert = false;
+$showError = false;
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    include 'partials/_dbconnect.php';
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $cpassword = $_POST["cpassword"];
+    $exists=false;
+    if(($password == $cpassword) && $exists==false){
+        $sql = "INSERT INTO `users` ( `username`, `password`,`cpassword` ) VALUES ('$username', '$password','$cpassword')";
+        $result = mysqli_query($conn, $sql);
+        if ($result){
+            $showAlert = true;
+        }
+    }
+    else{
+        $showError = "Passwords do not match";
+    }
 }
-include 'partials/_navb.php';
+require 'partials/_nav.php'
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
+
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
+<link rel="stylesheet"href="login.css">
+    <title>SignUp</title>
+  </head>
+  <body>
+ 
     
-    <h2>Home</h2>
-    
-    <?php if (isset($user)): ?>
-        
-        <p>Hello <?= htmlspecialchars($user["name"]) ?></p>
-        
-        <p><a href="logout.php">Log out</a></p>
-        
-    <?php else: ?>
-        
-        <p><a href="login.php">Log in</a> or <a href="signup.php">sign up</a></p>
-        
-    <?php endif; ?>
-    <div class="container">
-        
-          <form action="index.php" method="post">
-          <body>
+    <?php
+    if($showAlert){
+    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your account is now created and you can login
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    if($showError){
+    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!</strong> '. $showError.'
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    ?>
+
+    <div class="container my-4">
+     <h1 class="text-center">Signup to our website</h1>
+     <form action="/loginsystem/index.php" method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+            
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <div class="form-group">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" class="form-control" id="cpassword" name="cpassword">
+            <small id="emailHelp" class="form-text text-muted">Make sure to type the same password</small>
+        </div>
+         
+        <button type="submit" class="btn btn-primary">SignUp</button>
+     </form>
+    </div>
 
 
-    
-
-    <a class="weatherwidget-io" href="https://forecast7.com/en/32d96n102d83/denver-city/" data-label_1="DENVER CITY" data-label_2="WEATHER" data-theme="original" >DENVER CITY WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-
-  </nav>
-
-
-    <div class="container">
-    <h1 style="text-align:center;   border-color: black; border-width:2px; border-radius: 3px; border-style: solid; ">Welcome To weather Forecasting Website</h1>
-    
-          
-        <h2>website features</h2>
-        <ul>This website enables user to view ,forecast/predict and Report weather using API
-<li>API stands for Application Programming Interface. The application can be any software that performs a specific task and the interface is a point where two applications communicate.  </li>
-
-<li> Computers follow a protocol to communicate with each other. A protocol is nothing but a set of rules that computers follow to communicate. Any computer that doesn't follow the protocol breaks the communication thread. APIs available on the web use the HTTP protocol for a number of reasons - it's easy to use and it's popular
-  URL a web address where you want to make a request</li> 
-      <li>  Method  whether you want data already stored somewhere or want to save new data in a database
-        Header all the relevant information about your request including in what format the client device expects to receive the data
-        Body the body contains the actual request data</li>
-        <li>In our Unsplash example, the URL is https://unsplash.com/s/photos/nature. The method is GET because we want the server to get nature images back. The header includes information like the format our computer expects to get and accept – like language meaning, the language of the device, our operating system, and so on. The body includes the data we need to send to the server, the nature keyword for example.
-</li>
-       
-       <li> When a client makes a request, the server responds to that request. The response might be the data the client requested or an error.
-        
-        Just like a response, a request has a structure including a URL, status code, header and body. In a request, we have a method, which has four types. And in the response, we have a status code which indicates whether a request has been accepted or declined.
-     </li>
-     
-     <li>helps in analysing data with respect to weather in order to generate reports and store data regarding the conditions of the environment</li>
-     
-     
-     
-     
-     </ul> 
-     <script src="index.js"></script>
-     <footer style="background-color:black; text-align:center">
-     @Copyright weather forecasting website 2023- All Right Reserved.   
-            </footer>
-</body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>
-     
-    
-    
-    
-    
-    
-    
-    
-    
