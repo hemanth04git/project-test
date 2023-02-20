@@ -14,7 +14,7 @@ include 'partials/_navb.php';
   
    
 </head>
-<body>
+<body class="bg-dark">
     
 
     <a class="weatherwidget-io" href="https://forecast7.com/en/32d96n102d83/denver-city/" data-label_1="DENVER CITY" data-label_2="WEATHER" data-theme="original" >DENVER CITY WEATHER</a>
@@ -23,19 +23,72 @@ include 'partials/_navb.php';
 </script>
 
   </nav>
-  <img class="larger-image"src="bg.jpg" alt="image not found" >
-
+ 
     <div class="container">
         <h1 style="text-align:center;   border-color: black;
   border-width:2px;
   border-radius: 3px;
   border-style: solid; ">Welcome To weather Forecasting Website</h1>
+  <div >
+    <div class="col">
+      <div class="card mt-5">
+        <div class="card-header">
+</div>
+<div class="card-body">
   
+<table align="center"  border="2px" style="width:400px; background-color: blueviolet line-height:40px;"> 
+    <tr>
+      
+
+      <td>location</td><br>
+
+      <td>weather</td><br>
+
+      <td>description</td><br>
+</tr>
+</table>
+</div>
+
+<?php
+include 'partials/_connect.php';
+    
+    $sql="SELECT * FROM tool";
+    $result=mysqli_query($conn, $sql);
+    {
+
+    
+
+echo"<table border='2'>";
+echo" <tr>
+
+<td>location</td>
+<td>weather</td>
+<td>description</td>
+</tr>";}
+    
+    while($row=mysqli_fetch_assoc($result)){
+      echo"<tr>
+
+<td>{$row['location']}</td>
+<td>{$row['weather']}</td>
+<td>{$row['description']}</td>
+</tr>";
+
+    }        
+
+
+   
+  
+  
+
+echo"</table>";
+?>
+
           
 
             </div>
             
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.64169563106!2d-104.85511145!3d39.764338949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C%20CO%2C%20USA!5e0!3m2!1sen!2sin!4v1676048138598!5m2!1sen!2sin" width="1600" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+          
               
                <footer style="background-color:black; text-align:center">
   @Copyright weather forecasting website 2023- All Right Reserved.   

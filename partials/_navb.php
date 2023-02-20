@@ -11,14 +11,16 @@
       <li class="nav-item">
         <a class="nav-link" href="/loginsystem/index.php">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/map.php">view-location</a>
-      </li>
+   
       <li class="nav-item">
         <a class="nav-link" href="/loginsystem/weather.php">Weather</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/loginsystem/view.php">Report-Weather</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/loginsystem/map.php">view - Report</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/loginsystem/logout.php">logout</a>

@@ -1,5 +1,6 @@
 
 <?php 
+
  $showAlert = false;
  $showError = false;
     include 'partials/_navb.php';
@@ -12,7 +13,9 @@
       $description = $_POST['description'];
       $exists=false;
       if(isset($location)||isset($weather)||isset($description) && $exists=false){
-          $sql = "INSERT INTO  `tool` (` location`, `weather `, `description` ) VALUES ('$location','$weather','$description')";
+       
+        $sql="INSERT INTO `tool` (`location`, `weather`, `description`) VALUES ('$location', '$weather', '$description')";
+          
           $result = mysqli_query($conn, $sql);
           if ($result){
               $showAlert = true;
@@ -45,7 +48,7 @@
 <?php
     if($showAlert){
     echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> Your account is now created and you can login
+        <strong>Success!</strong> data entered into database
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
@@ -68,42 +71,44 @@
 </script>
 
   </nav>
-  <img class="bg"src="bg.jpg" alt="whether forecast">
-  <div class="container my-4">
+  <img class="bg"src="bg.jpg" alt="whether forecast" style="width=900px; align=center; border-color: black;
+  border-width 25px;
+  border-radius: 5px;
+  border-style: solid;
+  margin:0px
+  ;">
+  <div class="container my-4" style="background-color:blue;">
      <h1 class="text-center">weather reporting tool</h1>
-     <form action="/loginsystem/view.php" method="post">
+    
+     
+<form action="/loginsystem/view.php" method="post">
      
 
-        <div class="form-group">
-   
-            <label for="location">location</label>
-            <input type="text" class="form-control" id="location" name="location" >
-            
-        </div>
-        <div class="form-group">
-        <label for="weather">weather</label>
-            <input type="text" class="form-control" id="weather" name="weather">
-        </div>
-        <div class="form-group">
-        <label for="description">description</label>
-            <input type="text" class="form-control" id="description" name="description">
-        </div>
-       
-         
-        <button type="submit" class="btn btn-primary">submit</button>
-     </form>
-    </div>
-<table border="2">
-  <tr>
-    <th>sl.no</th>
-    <th>location</th>
-    <th>weather</th>
-    <th>description</th>
-</tr>
+     <div class="form-group">
 
-            
+         <label for="location">location</label>
+         <input type="text" class="form-control" id="location" name="location" >
+         
+     </div>
+     <div class="form-group">
+     <label for="weather">weather</label>
+         <input type="text" class="form-control" id="weather" name="weather">
+     </div>
+     <div class="form-group">
+     <label for="description">description</label>
+         <input type="text" class="form-control" id="description" name="description">
+     </div>
+    
+      
+     <button type="submit" class="btn btn-primary">submit</button>
+  </form>
+ </div>
+ 
+
+ 
+
+
+    
 
 </body>
-
-
 </html>

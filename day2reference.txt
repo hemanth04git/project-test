@@ -99,7 +99,31 @@ git pull https://github.com/raghuprasadks/sindhi-cloudcomputing-aug2021.git
 
 
 
+    $query="SELECT * FROM tool";
+    $result=mysqli_query($conn, $query);
+    {
 
+    
+
+echo"<table border='2'>";
+echo" <tr>
+
+<td>location</td>
+<td>weather</td>
+<td>description</td>
+</tr>";}
+    
+    while($row=mysqli_fetch_assoc($result)){
+      "<tr>
+
+<td>{$row['location']}</td>
+<td>{$row['weather']}</td>
+<td>{$row['description']}</td>
+</tr>";
+
+    }        
+
+?>
 
 
 
