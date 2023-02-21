@@ -4,7 +4,7 @@ body {
     
     font-family: 'Open Sans', sans-serif;
     background:#333;
-    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    background-image: url('https://source.unsplash.com/1920x1080/?landscape');
     font-size: 120%;
     
   }
@@ -13,23 +13,9 @@ body {
   
     
     
-    *{
     
-    margin:auto;
-    padding:12px;
-    box-sizing: border-box;
-   
-   
-    }
-    
-    .container{
-        max-width: 100%;
-        background-color: blueviolet;
-        padding: 34px;
-        margin:auto;
-    
-    
-    }.container h1,h2,p{
+ 
+    h1,h2,p{
         text-align: center;
         font-style: oblique;
     }h1{
@@ -38,15 +24,7 @@ body {
         p{
             font-size: 20px;
         }
-    
-    input{
-        width:80;
-        margin: 12px;
-        padding:7px;
-        border-radius: 6px;
-        border:2px solid black;
-    
-    }
+ 
     
     u{
       text-align: left;

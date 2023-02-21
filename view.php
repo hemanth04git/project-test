@@ -41,6 +41,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> weather forecasting website</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="view.css">
    
 </head>
@@ -64,23 +67,14 @@
     }
     ?>
 
- 
-    <a class="weatherwidget-io" href="https://forecast7.com/en/32d96n102d83/denver-city/" data-label_1="DENVER CITY" data-label_2="WEATHER" data-theme="original" >DENVER CITY WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
 
-  </nav>
-  <img class="bg"src="bg.jpg" alt="whether forecast" style="width=900px; align=center; border-color: black;
-  border-width 25px;
-  border-radius: 5px;
-  border-style: solid;
-  margin:0px
-  ;">
-  <div class="container my-4" style="background-color:blue;">
+
+
+  <div class="container my-5" style="background-color:gray;">
      <h1 class="text-center">weather reporting tool</h1>
+
     
-     
+
 <form action="/loginsystem/view.php" method="post">
      
 
@@ -103,12 +97,7 @@
      <button type="submit" class="btn btn-primary">submit</button>
   </form>
  </div>
- 
-
- 
-
-
-    
+      
 
 </body>
 </html>

@@ -3,9 +3,10 @@ body {
    
     
     font-family: 'Open Sans', sans-serif;
-    background: #222;
+    background:#333;
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     font-size: 120%;
+    
   }
   
   
@@ -14,16 +15,16 @@ body {
     
     *{
     
-    margin:0;
-    padding:0;
+    margin:auto;
+    padding:12px;
     box-sizing: border-box;
-   font-family:'poppins','sans-serif';
-    
+   
+   
     }
     
     .container{
         max-width: 100%;
-        background-color: black;
+        background-color: blueviolet;
         padding: 34px;
         margin:auto;
     
@@ -59,36 +60,9 @@ body {
       font-size:35px;
       font-family: 'Times New Roman', Times, serif;
     }
-.footer{
-   margin-top: 150px;
-    width:100%;
-    padding:100px 15%;
-    background:#333;
-    color:#efefef;
-    display:flex;
-
-}
-.footer div{
-    text-align:center;
-
-}
-.col1{
-    font-weight:300;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    display:block;
-    text-decoration:none;
-}
-.larger-image{
-    width: auto;
-    border-color: black;
-    border-width:2px;
-    border-radius: 3px;
-    border-style: solid;
-}
 h1{
-    border-color: black;
-  border-width:2px;
-  border-radius: 3px;
-  border-style: solid;
-  }
+  border-color: black;
+border-width:2px;
+border-radius: 3px;
+border-style: solid;
+}
