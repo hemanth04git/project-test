@@ -140,8 +140,7 @@ echo"</table>";
                   
               
         <footer style="background-color:black; text-align:center">
-  @Copyright weather forecasting website 2023- All Right Reserved.   
-</footer>
+  weather forecasting website 2023
 
 </body>
 
