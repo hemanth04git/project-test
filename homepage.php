@@ -134,7 +134,7 @@ weather forecasting website can be used for research and  paper generation purpo
         crossorigin="anonymous"></script>
         <script src="index.js"></script>
      <footer style="background-color:black; text-align:center">
-     @Copyright weather forecasting website 2023- All Right Reserved.   
+ weather forecasting website 2023
             </footer>
 
 </body>
