@@ -9,21 +9,21 @@
       <li class="nav-item active">
        
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/homepage.php">Home</a>
+        <a class="nav-link" href="/weather-project/homepage.php">Home</a>
       </li>
    
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/weather.php">Weather</a>
+        <a class="nav-link" href="/weather-project/weather.php">Weather</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/view.php">Report-Weather</a>
+        <a class="nav-link" href="/weather-project/view.php">Report-Weather</a>
       </li>
     
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/map.php">view - Report</a>
+        <a class="nav-link" href="/weather-project/map.php">view - Report</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/logout.php">logout</a>
+        <a class="nav-link" href="/weather-project/logout.php">logout</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

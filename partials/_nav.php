@@ -9,13 +9,13 @@
       <li class="nav-item active">
        
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/login.php">Login</a>
+        <a class="nav-link" href="/weather-project/login.php">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/index.php">Signup</a>
+        <a class="nav-link" href="/weather-project/index.php">Signup</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/logout.php">Logout</a>
+        <a class="nav-link" href="/weather-project/logout.php">Logout</a>
       </li>
        
       
